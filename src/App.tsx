@@ -3,7 +3,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import sunImage from "./assets/sun-with-birds.jpg";
 import lanternImage from "./assets/lantern-balloons.jpg";
 import landImage from "./assets/road.jpg";
-import catImage from "./cat.gif";
+import catImage from "./assets/cat.gif";
 
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
