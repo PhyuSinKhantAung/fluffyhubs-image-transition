@@ -2,6 +2,38 @@ import { FaDiscord, FaTwitter, FaTelegramPlane } from "react-icons/fa";
 import { WavyButton } from "./WavyButton";
 
 export const Footer = () => {
+  const icons = [
+    {
+      icon: (
+        <FaDiscord
+          size={24}
+          style={{ cursor: "pointer" }}
+          onClick={() => window.open("https://discord.com")}
+        />
+      ),
+      name: "Discord",
+    },
+    {
+      icon: (
+        <FaTelegramPlane
+          size={24}
+          style={{ cursor: "pointer" }}
+          onClick={() => window.open("https://t.me/")}
+        />
+      ),
+      name: "Telegram",
+    },
+    {
+      icon: (
+        <FaTwitter
+          size={24}
+          style={{ cursor: "pointer" }}
+          onClick={() => window.open("https://twitter.com/")}
+        />
+      ),
+      name: "Twitter",
+    },
+  ];
   return (
     <footer
       style={{
@@ -26,9 +58,9 @@ export const Footer = () => {
         }}
       >
         <div style={{ display: "flex", gap: "1rem" }}>
-          {[FaDiscord, FaTelegramPlane, FaTwitter].map((Icon, idx) => (
+          {icons.map((i) => (
             <div
-              key={idx}
+              key={i.name}
               style={{ position: "relative", width: "2rem", height: "2rem" }}
             >
               <div
@@ -53,7 +85,7 @@ export const Footer = () => {
                   (e.currentTarget.style.transform = "scale(1)")
                 }
               >
-                <Icon size={24} color="#1e1e1e" />
+                {i.icon}
               </div>
             </div>
           ))}
